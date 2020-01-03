@@ -9,7 +9,7 @@
   <style>
     body {
       margin-top: 70px;
-      background-color: #333;
+      background-color: #555;
       color: #fff;
     }
 
@@ -27,19 +27,19 @@
           </div>
         </form>
         <div id="output">
-          <div class="card alert-warning">
+          <div class="card alert-warning mb-2">
             <div class="card-block">
               <h4> USD </h4>
               <div id="usdOutput"></div>
             </div>
           </div>
-          <div class="card alert-primary">
+          <div class="card alert-primary mb-2">
             <div class="card-block">
               <h4> EUR </h4>
               <div id="eurOutput"></div>
             </div>
           </div>
-          <div class="card alert-success">
+          <div class="card alert-success mb-2">
             <div class="card-block">
               <h4> VND </h4>
               <div id="vndOutput"></div>
@@ -47,8 +47,8 @@
           </div>
           <div class="card">
             <div class="card-block alert-secondary">
-              <h4> YEN </h4>
-              <div id="yenOutput"></div>
+              <h4> JPY </h4>
+              <div id="jpyOutput"></div>
             </div>
           </div>
         </div>
@@ -59,7 +59,10 @@
   <script>
     document.getElementById('rubInput').addEventListener('input', function(e){
       let rub = e.target.value;
-      document.getElementById('usdOutput').innerHTML = rub / 64;
+      document.getElementById('usdOutput').innerHTML = rub / 62.08;
+      document.getElementById('eurOutput').innerHTML = rub / 69.33;
+      document.getElementById('vndOutput').innerHTML = rub / 0.002687;
+      document.getElementById('jpyOutput').innerHTML = rub / 0.57;
     })
   </script>
 </body>
